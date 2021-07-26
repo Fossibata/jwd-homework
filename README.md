@@ -14,3 +14,9 @@
 <img src = "images/img1_7.PNG" width = "100%">
 Запускаем приложение.
 <img src = "images/img1_8.PNG" width = "100%">
+Меняем структуру проекта и добавляем pom.xml.
+<img src = "images/img1_9.PNG" width = "100%">
+Собираем проект.
+<img src = "images/img1_10.PNG" width = "100%">
+Можем запустить -jar.
+<img src = "images/img1_11.PNG" width = "100%">
