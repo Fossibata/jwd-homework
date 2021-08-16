@@ -17,21 +17,21 @@ public class PointsValidatorTest {
 
 
     @Test
-    public void TestValidInput() throws NotValidArgumentException, TooManyArgumentException, NotEnoughArgumentException {
+    public void testValidInput() throws NotValidArgumentException, TooManyArgumentException, NotEnoughArgumentException {
        Assert.assertTrue(validator.isValid(VALID_ARGS));
 
     }
     @Test(expectedExceptions = NotEnoughArgumentException.class)
-    public void TestNotEnoughArgumentsException() throws NotValidArgumentException, TooManyArgumentException, NotEnoughArgumentException {
+    public void testNotEnoughArgumentsException() throws NotValidArgumentException, TooManyArgumentException, NotEnoughArgumentException {
         validator.isValid(NOT_ENOUGH_ARGS);
 
     }
     @Test(expectedExceptions = TooManyArgumentException.class)
-    public void TestNotEnoughArgumentException() throws NotValidArgumentException, TooManyArgumentException, NotEnoughArgumentException {
+    public void testNotEnoughArgumentException() throws NotValidArgumentException, TooManyArgumentException, NotEnoughArgumentException {
         validator.isValid(TOO_MANY_ARGS);
     }
     @Test(expectedExceptions = NotValidArgumentException.class)
-    public void TestNotValidInputException() throws NotValidArgumentException, TooManyArgumentException, NotEnoughArgumentException {
+    public void testNotValidInputException() throws NotValidArgumentException, TooManyArgumentException, NotEnoughArgumentException {
         validator.isValid(NOT_VALID_ARGS);
     }
 }
