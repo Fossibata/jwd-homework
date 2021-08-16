@@ -1,4 +1,4 @@
-package com.epam.jwd.tetrahedron;
+package com.epam.jwd.tetrahedron.action;
 
 import com.epam.jwd.tetrahedron.action.PointsValidator;
 import com.epam.jwd.tetrahedron.exception.NotEnoughArgumentException;
