@@ -19,7 +19,7 @@ public class TetrahedronFactory {
                 "the base is not parallel to the coordinate plane.";
 
         if (validator.isValid(a.getCoordinates(), b.getCoordinates(),
-                c.getCoordinates(), d.getCoordinates(),computer)) return new Tetrahedron(a, b, c, d);
+                c.getCoordinates(), d.getCoordinates(), computer)) return new Tetrahedron(a, b, c, d);
         else throw new CreateTetrahedronException(creationFailMessage);
     }
 }

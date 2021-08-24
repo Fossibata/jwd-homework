@@ -21,7 +21,7 @@ public class TetrahedronRegistrar implements Observer {
         initialize(computer);
     }
 
-    private void initialize(TetrahedronComputer computer){
+    private void initialize(TetrahedronComputer computer) {
         this.surfaceSquare = computer.computeSurfaceSquare(tetrahedron);
         this.volume = computer.computeVolume(tetrahedron);
         this.volumeRatio = computer.computeVolumeRatio(tetrahedron);
