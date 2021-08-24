@@ -30,13 +30,13 @@ public class TetrahedronRegistrarRepository implements Repository<TetrahedronReg
 
     @Override
     public boolean update(TetrahedronRegistrar oldRegistrar, TetrahedronRegistrar newRegistrar) {
-      if(registrars.contains(oldRegistrar)) {
-          int indexOldRegistrar = registrars.indexOf(oldRegistrar);
-          registrars.set(indexOldRegistrar, newRegistrar);
-          return true;
-      } else{
-          return false;
-      }
+        if (registrars.contains(oldRegistrar)) {
+            int indexOldRegistrar = registrars.indexOf(oldRegistrar);
+            registrars.set(indexOldRegistrar, newRegistrar);
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override
@@ -54,7 +54,7 @@ public class TetrahedronRegistrarRepository implements Repository<TetrahedronReg
         List<TetrahedronRegistrar> specRegistrars = new ArrayList<>();
 
         for (TetrahedronRegistrar registrar : registrars) {
-            if(specification.isExist(registrar)){
+            if (specification.isExist(registrar)) {
                 specRegistrars.add(registrar);
             }
         }
