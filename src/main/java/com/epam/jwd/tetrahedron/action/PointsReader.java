@@ -17,19 +17,19 @@ public class PointsReader {
 
     public static Logger LOG = LogManager.getLogger(PointsReader.class);
 
-    private Point[] toPointArray(String input){
+    private Point[] toPointArray(String input) {
         String[] inputSplitBySpace = input.split("\\s");
-        double [] doubles = new double[12];
+        double[] doubles = new double[12];
         for (int i = 0; i < inputSplitBySpace.length; i++) {
             doubles[i] = Double.parseDouble(inputSplitBySpace[i]);
         }
-        return new Point[]{Point.of(doubles[0],doubles[1],doubles[2]), Point.of(doubles[3],doubles[4],doubles[5]),
-        Point.of(doubles[6],doubles[7],doubles[8]),Point.of(doubles[9],doubles[10],doubles[11])};
+        return new Point[]{Point.of(doubles[0], doubles[1], doubles[2]), Point.of(doubles[3], doubles[4], doubles[5]),
+                Point.of(doubles[6], doubles[7], doubles[8]), Point.of(doubles[9], doubles[10], doubles[11])};
     }
 
     public List<Point[]> obtainCheckedData(String path, PointsValidator validator) throws IOException {
         List<String> uncheckedData = Files.readAllLines(new File(path).toPath());
-        if(uncheckedData.isEmpty()) return null;
+        if (uncheckedData.isEmpty()) return null;
 
         List<Point[]> checkedData = new ArrayList<>();
 

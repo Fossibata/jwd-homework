@@ -18,17 +18,14 @@ public class PointsValidator {
         String tooManyArgumentsMessage = String.format("Too many arguments in input string:%s", points);
         String notValidArgumentsMessage = String.format("Not valid arguments in input string: %s", points);
 
-         if(points.matches(validArguments)){
-              return true;
-            }
-            else if (points.matches(notEnoughArguments)){
-                throw new NotEnoughArgumentException(notEnoughArgumentsMessage);
-            }
-            else if (points.matches(tooManyArguments)){
-                throw new TooManyArgumentException(tooManyArgumentsMessage);
-            }
-            else {
-                throw new NotValidArgumentException(notValidArgumentsMessage);
+        if (points.matches(validArguments)) {
+            return true;
+        } else if (points.matches(notEnoughArguments)) {
+            throw new NotEnoughArgumentException(notEnoughArgumentsMessage);
+        } else if (points.matches(tooManyArguments)) {
+            throw new TooManyArgumentException(tooManyArgumentsMessage);
+        } else {
+            throw new NotValidArgumentException(notValidArgumentsMessage);
         }
     }
 }
