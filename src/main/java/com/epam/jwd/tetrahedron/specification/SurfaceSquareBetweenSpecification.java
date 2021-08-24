@@ -2,7 +2,7 @@ package com.epam.jwd.tetrahedron.specification;
 
 import com.epam.jwd.tetrahedron.model.TetrahedronRegistrar;
 
-public class SurfaceSquareBetweenSpecification implements Specification<TetrahedronRegistrar>{
+public class SurfaceSquareBetweenSpecification implements Specification<TetrahedronRegistrar> {
     private final double from;
     private final double to;
 

@@ -3,14 +3,14 @@ package com.epam.jwd.tetrahedron.specification;
 import com.epam.jwd.tetrahedron.model.Point;
 import com.epam.jwd.tetrahedron.model.TetrahedronRegistrar;
 
-public class QuadrantSpecification implements Specification<TetrahedronRegistrar>{
+public class QuadrantSpecification implements Specification<TetrahedronRegistrar> {
     private final int quadrant;
 
     public QuadrantSpecification(int quadrant) {
         this.quadrant = quadrant;
     }
 
-    int obtainQuadrant(Point p){
+    int obtainQuadrant(Point p) {
         double x = p.getCoordinates().getX();
         double y = p.getCoordinates().getY();
         double z = p.getCoordinates().getZ();

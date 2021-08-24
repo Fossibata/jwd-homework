@@ -3,7 +3,7 @@ package com.epam.jwd.tetrahedron.specification;
 import com.epam.jwd.tetrahedron.model.Coordinates;
 import com.epam.jwd.tetrahedron.model.TetrahedronRegistrar;
 
-public class DistanceFromOriginBetweenSpecification implements Specification<TetrahedronRegistrar>{
+public class DistanceFromOriginBetweenSpecification implements Specification<TetrahedronRegistrar> {
     private final double from;
     private final double to;
 
@@ -28,13 +28,12 @@ public class DistanceFromOriginBetweenSpecification implements Specification<Tet
             int compareFrom = Double.compare(from, distance);
             int compareTo = Double.compare(distance, to);
 
-            if(compareFrom == 1) {
+            if (compareFrom == 1) {
                 return false;
-            }
-            else if (compareTo != 1){
+            } else if (compareTo != 1) {
                 isDistance = true;
             }
-      }
+        }
         return isDistance;
     }
 }
