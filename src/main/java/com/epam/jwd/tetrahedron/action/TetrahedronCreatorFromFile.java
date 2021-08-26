@@ -15,12 +15,12 @@ public class TetrahedronCreatorFromFile {
 
     public static Logger LOG = LogManager.getLogger(TetrahedronCreatorFromFile.class);
 
-    public List<Tetrahedron> createFromFile(String pathToFile){
+    public List<Tetrahedron> createFromFile(String pathToFile) {
 
         PointsReader reader = new PointsReader();
         PointsValidator pointsValidator = new PointsValidator();
 
-        TetrahedronValidator  tetrahedronValidator= new TetrahedronValidator();
+        TetrahedronValidator tetrahedronValidator = new TetrahedronValidator();
         TetrahedronComputer computer = new TetrahedronComputer();
 
         TetrahedronFactory factory = new TetrahedronFactory(tetrahedronValidator, computer);
@@ -28,7 +28,7 @@ public class TetrahedronCreatorFromFile {
 
         try {
             List<Point[]> points = reader.obtainCheckedData(pathToFile, pointsValidator);
-            if(points == null) return null;
+            if (points == null) return null;
             tetrahedronsList = new ArrayList<>();
             for (Point[] point : points) {
                 try {
@@ -44,7 +44,7 @@ public class TetrahedronCreatorFromFile {
                     String creationFailMessage = String.format("Tetrahedron is not create by points %s, %s, %s, %s" +
                                     "\n because %s",
                             point[0].getCoordinates(), point[1].getCoordinates(), point[2].getCoordinates(),
-                            point[3].getCoordinates(),e.getMessage());
+                            point[3].getCoordinates(), e.getMessage());
                     LOG.error(creationFailMessage);
                 }
             }

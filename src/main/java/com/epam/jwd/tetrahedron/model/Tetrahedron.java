@@ -18,12 +18,15 @@ public class Tetrahedron {
     public Point getA() {
         return a;
     }
+
     public Point getB() {
         return b;
     }
+
     public Point getC() {
         return c;
     }
+
     public Point getD() {
         return d;
     }
@@ -47,6 +50,22 @@ public class Tetrahedron {
                 Objects.equals(b, that.b) &&
                 Objects.equals(c, that.c) &&
                 Objects.equals(d, that.d);
+    }
+
+    public void setA(Point a) {
+        this.a = a;
+    }
+
+    public void setB(Point b) {
+        this.b = b;
+    }
+
+    public void setC(Point c) {
+        this.c = c;
+    }
+
+    public void setD(Point d) {
+        this.d = d;
     }
 
     @Override

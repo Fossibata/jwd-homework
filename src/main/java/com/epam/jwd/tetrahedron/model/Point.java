@@ -13,7 +13,7 @@ public class Point {
         return coordinates;
     }
 
-    public static Point of(double x, double y,double z){
+    public static Point of(double x, double y, double z) {
         Coordinates tmp = new Coordinates(x, y, z);
         return new Point(tmp);
     }
